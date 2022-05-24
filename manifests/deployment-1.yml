@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "hasin-95de"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "hasin-95de"
+  template:
+    metadata:
+      labels:
+        app: "hasin-95de"
+    spec:
+      containers:
+        - name: "hasin-95de"
+          image: "haisnkdf.azurecr.io/hasin"
+          ports:
+          - containerPort: 80
